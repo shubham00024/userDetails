@@ -6,7 +6,8 @@ const port = 3000;
 const os = require('os');
 
 // Get network interfaces information
-const ip = os.networkInterfaces();
+var ip =''
+ip = os.networkInterfaces();
 
 // Access the desired value (IPv4 address in this case)
 const ipv4Address = ip['Ethernet'][1]['address'];
