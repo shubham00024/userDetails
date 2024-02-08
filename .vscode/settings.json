@@ -1,0 +1,6 @@
+{
+    "editor.mouseWheelZoom": true,
+    "terminal.integrated.mouseWheelZoom": true,
+    "code-runner.clearPreviousOutput": true,
+    "code-runner.runInTerminal": true
+}
