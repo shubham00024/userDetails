@@ -6,14 +6,16 @@ const port = 3000;
 const os = require('os');
 
 // Get network interfaces information
-var ip =''
-ip = os.networkInterfaces();
+var ip = os.networkInterfaces();
 
-// Access the desired value (IPv4 address in this case)
-const ipv4Address = ip['Ethernet'][1]['address'];
-console.log("IPv4 Address:", ipv4Address);
+if (ip && ip['Ethernet'] && ip['Ethernet'][1] && ip['Ethernet'][1]['address']) {
+  const ipv4Address = ip['Ethernet'][1]['address'];
+  console.log("IPv4 Address:", ipv4Address);
+} else {
+  console.error("Unable to find the IPv4 address for the Ethernet interface.");
+}
 
-// Hostname
+/// Hostname
 const hostname = os.hostname()
 console.log("Hostname:",os.hostname()) 
 
